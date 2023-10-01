@@ -3,7 +3,7 @@ import { FaFacebook, FaGoogle, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-black text-white ">
+        <footer className="footer p-10 bg-black text-white rounded-xl ">
             <div  >
                 <img src={logo} alt="" />
                 <p>Edwin Diaz is a software and web technologies <br /> engineer, a life coach <br /> trainer who is also a serial .</p>
