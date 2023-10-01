@@ -4,6 +4,7 @@ import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
 import Meet from "./Meet/Meet";
 import Product from "./Product/Product";
+import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
             <Contact />
             <Product />
             <Meet />
+            <WhyChooseUs />
 
         </div>
     );
