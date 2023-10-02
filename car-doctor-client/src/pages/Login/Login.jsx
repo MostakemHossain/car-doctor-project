@@ -1,12 +1,62 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import login from '../../assets/images/login/login.svg'
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
+    const { signIn } = useContext(AuthContext);
+    const notify = () => {
+        toast.success('🦄 Wow so easy!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+    };
 
     const handleLogin = (event) => {
         event.preventDefault();
+        const form = event.target;
 
-    }
+        const email = form.email.value;
+        const password = form.password.value;
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                // If the sign-in is successful, show a success message
+                toast.success('Login successful!', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+                console.log(user);
+            })
+            .catch(error => {
+                // If there's an error, show an error message
+                toast.error('Login failed. Check your email and password.', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+                console.log(error)
+            })
+    };
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row ">
