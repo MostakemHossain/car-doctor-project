@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg'
 
@@ -28,9 +29,12 @@ const NavBar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navItems}
+
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end ">
+
+
                 <button className="btn btn-outline hover:border-none text-[#FF3811] hover:text-white  hover:bg-[#FF3811]">Appointment</button>
             </div>
         </div>

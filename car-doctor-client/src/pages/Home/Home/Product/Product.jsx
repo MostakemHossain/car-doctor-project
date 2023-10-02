@@ -15,12 +15,12 @@ const Product = () => {
             <div className="space-y-3 text-center">
                 <h3 className="text-2xl font-bold text-[#FF3811]">Popular Products</h3>
                 <h3 className="text-5xl font-bold">Browse Our Products</h3>
-                <p className="text-[#737373]">
+                <p className="text-[#737373] mb-10">
                     the majority have suffered alteration in some form, by injected humour, or <br /> randomised words which don't look even slightly believable.
                 </p>
             </div>
 
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     products.map(product => <ProductCard
                         key={product._id}
