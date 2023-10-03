@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import signUp from '../../../assets/images/login/login.svg'
 import { AuthContext } from '../../../providers/AuthProvider';
 
@@ -16,15 +17,36 @@ const SingUp = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                // Show a success toast message
+                toast.success('Signup successful! Welcome, ' + name, {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
                 console.log(user);
             })
             .catch(error => {
+                // Show an error toast message
+                toast.error('Signup failed. Please try again.', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
                 console.log(error)
             })
+    };
 
 
-
-    }
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row ">

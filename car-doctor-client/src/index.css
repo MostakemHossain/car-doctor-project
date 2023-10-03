@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background-color: #f6f6f6;
+  --text-color: #0a0a0a;
+  -toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
+}

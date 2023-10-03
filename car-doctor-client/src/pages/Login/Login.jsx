@@ -6,18 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
-    const notify = () => {
-        toast.success('🦄 Wow so easy!', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-        });
-    };
+
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -40,7 +29,7 @@ const Login = () => {
                     progress: undefined,
                     theme: "dark",
                 });
-                console.log(user);
+
             })
             .catch(error => {
                 // If there's an error, show an error message
