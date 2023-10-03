@@ -4,6 +4,7 @@
 import { useLoaderData } from "react-router-dom";
 import Card from "./Card";
 import Details from "./Details";
+import Process from "./Process";
 import ServiceBanner from "./ServiceBanner";
 
 const ServiceDetail = () => {
@@ -15,6 +16,7 @@ const ServiceDetail = () => {
             <ServiceBanner />
             <Card img={img} ></Card>
             <Details title={title} facility={facility} />
+            <Process />
 
 
 

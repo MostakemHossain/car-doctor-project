@@ -11,7 +11,7 @@ import logo from '../../assets/logo.svg'
 const Details = () => {
 
     const service = useLoaderData();
-    const { title, img, facility } = service;
+    const { title, img, facility, price } = service;
 
 
 
@@ -21,13 +21,13 @@ const Details = () => {
 
 
     return (
-        <div className="mt-5 mb-10">
-            <h1 className="text-5xl font-bold mb-5 p-3">{title}</h1>
+        <div className="mt-5 mb-5">
+            <h1 className="text-5xl font-bold mb-2 p-3">{title}</h1>
 
             <div className="lg:flex gap-24">
 
                 <div className="lg:w-[800px] gap-10" >
-                    <div className="text-[#737373] p-3">
+                    <div className="text-[#737373] p-3 mb-10">
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
                     </div>
 
@@ -53,7 +53,7 @@ const Details = () => {
                     </div>
 
 
-                    <div className="text-[#737373] p-3">
+                    <div className="text-[#737373] p-3 mt-10">
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const Details = () => {
 
                     <div className="bg-black text-white p-16 rounded-2xl">
                         <p className="text-3xl font-bold">Download</p>
-                        <div className="flex gap-2 items-center mt-5">
+                        <div className="flex gap-2 items-center mt-3">
                             <img src={img1} alt="" />
                             <div>
                                 <p className="text-xl">Our Brochure</p>
@@ -72,7 +72,7 @@ const Details = () => {
                                 <FaArrowRight></FaArrowRight>
                             </div>
                         </div>
-                        <div className="mt-5 flex gap-2 items-center">
+                        <div className="mt-2 flex gap-2 items-center">
                             <img src={img1} alt="" />
                             <div>
                                 <p className="text-xl">Our Brochure</p>
@@ -89,7 +89,7 @@ const Details = () => {
 
 
 
-                    <div className="bg-[#151515] p-10 mt-10 text-white rounded-2xl items-center">
+                    <div className="bg-[#151515] p-10 mt-5 text-white rounded-2xl items-center">
 
 
                         <div className="text-center">
@@ -100,7 +100,7 @@ const Details = () => {
                             To Help You</p>
 
 
-                        <div className="relative mb-10">
+                        <div className="relative mb-5">
                             <div className="bg-white p-10 rounded-xl">
                                 <div>
                                     <p className="text-black font-bold"><span className="text-[#FF3811] font-bold">Car Doctor</span> Special</p>
@@ -117,6 +117,16 @@ const Details = () => {
 
                     </div>
 
+
+                    <div className="mt-5">
+                        <p className="text-3xl mb-2 font-bold">Price:${price}</p>
+
+                        <div className="bg-[#FF3811] text-center p-3 rounded-lg">
+                            <p className="text-white">Proceed Checkout</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
 
@@ -126,6 +136,8 @@ const Details = () => {
 
 
             </div>
+
+
 
         </div >
     );
