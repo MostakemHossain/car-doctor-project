@@ -1,12 +1,12 @@
 
 
 import { FaArrowRight } from 'react-icons/fa';
-import img from '../../assets/images/banner/3.jpg'
-const Card = () => {
+
+const Card = ({ img }) => {
     return (
         <div className='lg:flex gap-3 lg:gap-10 justify-around mb-10'>
             <div>
-                <img src={img} className="w-full lg:w-[700px]" alt="" />
+                <img src={img} className="w-full lg:w-[800px]" alt="" />
             </div>
 
             <div className='bg-[#F3F3F3] p-14 rounded-2xl'>
