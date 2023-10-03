@@ -1,11 +1,18 @@
+
+
+
+import Card from "./Card";
 import ServiceBanner from "./ServiceBanner";
 
 const ServiceDetail = () => {
     return (
         <div>
-            <div>
-                <ServiceBanner />
-            </div>
+
+            <ServiceBanner />
+            <Card />
+
+
+
 
         </div>
     );
