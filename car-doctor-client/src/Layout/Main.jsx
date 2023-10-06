@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "../../../../car-doctor-project/car-doctor-client/src/pages/Shared/NavBar/NavBar";
+
 import Footer from "../pages/Shared/Footer/Footer";
+import NavBar from "../pages/Shared/Navber/Navber";
 
 
 

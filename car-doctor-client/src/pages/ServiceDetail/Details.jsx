@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import DetailCard from "./DetailCard";
 
 import img1 from '../../assets/images/testimonial/Frame.png'
@@ -11,7 +11,7 @@ import logo from '../../assets/logo.svg'
 const Details = () => {
 
     const service = useLoaderData();
-    const { title, img, facility, price } = service;
+    const { _id, title, img, facility, price } = service;
 
 
 
@@ -122,7 +122,7 @@ const Details = () => {
                         <p className="text-3xl mb-2 font-bold">Price:${price}</p>
 
                         <div className="bg-[#FF3811] text-center p-3 rounded-lg">
-                            <p className="text-white">Proceed Checkout</p>
+                            <Link to={`${`/checkout/${_id}`}`} ><p className="text-white">Proceed Checkout</p></Link>
                         </div>
 
                     </div>
